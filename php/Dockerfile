@@ -16,6 +16,10 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN curl -sS https://get.symfony.com/cli/installer | bash
 RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony 
 
+# for npm and nodejs
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash
+RUN apt-get install -y nodejs
+
 # git
 RUN git config --global user.email "temkaaw0wpro@gmail.com"
 RUN git config --global user.name "TemKaa1337"
