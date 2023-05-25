@@ -23,3 +23,7 @@ RUN apt-get install -y nodejs
 # git
 RUN git config --global user.email "temkaaw0wpro@gmail.com"
 RUN git config --global user.name "TemKaa1337"
+
+# set timezone
+RUN rm -rf /etc/localtime
+RUN ln -s /usr/share/zoneinfo/Europe/Minsk /etc/localtime
